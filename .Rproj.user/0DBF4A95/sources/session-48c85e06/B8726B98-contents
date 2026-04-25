@@ -1,0 +1,124 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Epidemiology with R"
+  subtitle: "A Practical Guide for Public Health Researchers"
+  author:
+    - name: "Bikram Adhikari"
+      email: "bdhikari@memphis.edu"
+      affiliation: "University of Memphis"
+      orcid: "0000-0002-4299-9233"
+  date: today
+  date-format: "MMMM D, YYYY"
+
+  cover-image: cover.png
+  favicon: cover.png
+  search: true
+  repo-url: "https://github.com/yourusername/epi-r-book"
+  repo-actions: [edit, issue]
+  sharing: [twitter, linkedin]
+  downloads: [pdf, epub]
+  page-navigation: true
+  back-to-top-navigation: true
+
+  sidebar:
+    style: "docked"
+    search: true
+    background: light
+    logo: cover.png
+
+  chapters:
+    - index.qmd
+
+    - part: "Getting Started"
+      chapters:
+        - section1/chapter1/chapter1.qmd
+        - intro.qmd
+
+    - part: "Descriptive Epidemiology"
+      chapters:
+        - intro.qmd
+
+    - part: "Analytical Epidemiology"
+      chapters:
+        - intro.qmd
+
+    - part: "Closing"
+      chapters:
+        - intro.qmd
+
+  appendices:
+    - intro.qmd
+
+bibliography: references.bib
+citation: true
+
+execute:
+  echo: true
+  warning: false
+  message: false
+  cache: true
+  freeze: auto
+
+knitr:
+  opts_chunk:
+    comment: "#>"
+    fig.align: "center"
+    out.width: "85%"
+    dpi: 300
+
+format:
+  html:
+    theme:
+      light: [cosmo, brand]
+      dark:  [darkly, brand]
+    mainfont: "Source Sans Pro"
+    monofont: "Fira Code"
+    fontsize: 1.1em
+    linestretch: 1.7
+    code-fold: false
+    code-tools: false
+    code-link: false
+    code-overflow: scroll
+    highlight-style: github
+    toc: true
+    toc-depth: 3
+    toc-title: "On this page"
+    number-sections: true
+    number-depth: 3
+    smooth-scroll: true
+    callout-appearance: simple
+    fig-cap-location: bottom
+    tbl-cap-location: top
+
+  pdf:
+    documentclass: scrreprt
+    classoption: [oneside, open=any]
+    mainfont: "Times New Roman"
+    sansfont: "Arial"
+    monofont: "Courier New"
+    fontsize: 12pt
+    linestretch: 1.5
+    geometry:
+      - top=30mm
+      - bottom=30mm
+      - left=25mm
+      - right=25mm
+    toc: true
+    toc-depth: 3
+    lof: true
+    lot: true
+    number-sections: true
+    code-block-border-left: "#E83E8C"
+    highlight-style: tango
+    code-overflow: wrap
+    colorlinks: true
+    linkcolor: "NavyBlue"
+    urlcolor: "NavyBlue"
+    citecolor: "NavyBlue"
+
+  epub:
+    cover-image: cover.png
+    toc: true
